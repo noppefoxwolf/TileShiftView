@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import TileShiftView
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+  @IBOutlet private weak var tileShiftView: TileShiftView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    tileShiftView.prepare(with: [#imageLiteral(resourceName: "artwork_sample_00000"),
+                            #imageLiteral(resourceName: "artwork_sample_00001"),
+                            #imageLiteral(resourceName: "artwork_sample_00002"),
+                            #imageLiteral(resourceName: "artwork_sample_00003"),
+                            #imageLiteral(resourceName: "artwork_sample_00004"),
+                            #imageLiteral(resourceName: "artwork_sample_00005"),
+                            #imageLiteral(resourceName: "artwork_sample_00006"),
+                            #imageLiteral(resourceName: "artwork_sample_00007"),
+                            #imageLiteral(resourceName: "artwork_sample_00008")])
+    tileShiftView.ignoreIndecies = [4]
+  }
 }
 
