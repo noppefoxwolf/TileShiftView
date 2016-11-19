@@ -5,6 +5,30 @@
 [![License](https://img.shields.io/cocoapods/l/TileShiftView.svg?style=flat)](http://cocoapods.org/pods/TileShiftView)
 [![Platform](https://img.shields.io/cocoapods/p/TileShiftView.svg?style=flat)](http://cocoapods.org/pods/TileShiftView)
 
+## ScreensShot
+
+![](https://raw.githubusercontent.com/noppefoxwolf/TileShiftView/master/sample.gif)
+
+## Usage
+
+```
+@IBOutlet private weak var tileShiftView: TileShiftView!
+```
+or init(with frame)
+
+```
+tileShiftView.prepare(with: [#imageLiteral(resourceName: "artwork_sample_00000"),
+                            #imageLiteral(resourceName: "artwork_sample_00001"),
+                            #imageLiteral(resourceName: "artwork_sample_00002"),
+                            #imageLiteral(resourceName: "artwork_sample_00003"),
+                            #imageLiteral(resourceName: "artwork_sample_00004"),
+                            #imageLiteral(resourceName: "artwork_sample_00005"),
+                            #imageLiteral(resourceName: "artwork_sample_00006"),
+                            #imageLiteral(resourceName: "artwork_sample_00007"),
+                            #imageLiteral(resourceName: "artwork_sample_00008")])
+tileShiftView.ignoreIndecies = [4]
+```
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
