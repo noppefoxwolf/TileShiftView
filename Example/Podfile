@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TileShiftView_Example' do
+  pod 'TileShiftView', :path => '../'
+
+  target 'TileShiftView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
