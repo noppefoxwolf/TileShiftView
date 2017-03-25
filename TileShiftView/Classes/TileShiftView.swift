@@ -14,7 +14,7 @@ open class TileShiftView: UIView {
   fileprivate struct Const {
     static let Column: Int = 3
     static let Line: Int = 3
-    static let Rotation = -30.0
+    static let Rotation: CGFloat = -30.0
     static let CellIdentifier = "TileCollectionViewCell"
     static let interval: RxTimeInterval = 3.0
   }
@@ -26,6 +26,11 @@ open class TileShiftView: UIView {
   
   //temp
   private var lastUpdateIndex: Int = 0
+  public var rotation: CGFloat = 0.0
+  public var isEnabledBorder = false
+  public var borderWidth: CGFloat = 1.0
+  public var borderColor: UIColor = UIColor.lightGray
+  
   
   //public
   private var images = [UIImage]()
@@ -67,6 +72,7 @@ open class TileShiftView: UIView {
   
   private func setupAppearance() {
     collectionView.backgroundColor = UIColor.clear
+    rotation = Const.Rotation
   }
   
   private func setupSubscriber() {
@@ -94,7 +100,7 @@ open class TileShiftView: UIView {
   }
   
   private func setupRotation() {
-    collectionView.transform = CGAffineTransform(rotationAngle: CGFloat(Const.Rotation * M_PI / 180.0))
+    collectionView.transform = CGAffineTransform(rotationAngle: rotation * CGFloat.pi / 180.0)
   }
   
   private func createNextUpdateIndex() -> Int {
@@ -142,7 +148,10 @@ extension TileShiftView: UICollectionViewDelegate, UICollectionViewDataSource, U
   }
   
   public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.CellIdentifier, for: indexPath)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.CellIdentifier, for: indexPath) as! TileCollectionViewCell
+    cell.isEnabledBorder = isEnabledBorder
+    cell.borderColor = borderColor
+    cell.borderWidth = borderWidth
     return cell
   }
   

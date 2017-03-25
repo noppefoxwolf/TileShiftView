@@ -14,6 +14,9 @@ final class TileCollectionViewCell: UICollectionViewCell {
   }
   
   private var imageView = UIImageView()
+  var isEnabledBorder = false
+  var borderWidth: CGFloat = 1.0
+  var borderColor: UIColor = UIColor.lightGray
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -60,6 +63,10 @@ final class TileCollectionViewCell: UICollectionViewCell {
   
   override func layoutSubviews() {
     super.layoutSubviews()
+    if isEnabledBorder {
+      imageView.layer.borderWidth = borderWidth
+      imageView.layer.borderColor = borderColor.cgColor
+    }
     imageView.frame = CGRect(x: Const.Padding,
                              y: Const.Padding,
                              width: bounds.width - Const.Padding * 2.0,

@@ -24,6 +24,10 @@ final class ViewController: UIViewController {
                             #imageLiteral(resourceName: "artwork_sample_00006"),
                             #imageLiteral(resourceName: "artwork_sample_00007"),
                             #imageLiteral(resourceName: "artwork_sample_00008")])
+    tileShiftView.rotation = 15.0
+    tileShiftView.isEnabledBorder = true
+    tileShiftView.borderWidth = 3.0
+    tileShiftView.borderColor = UIColor.red
     tileShiftView.ignoreIndecies = [4]
   }
 }
