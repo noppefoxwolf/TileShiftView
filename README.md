@@ -1,6 +1,6 @@
 # TileShiftView
 
-[![CI Status](http://img.shields.io/travis/Tomoya Hirano/TileShiftView.svg?style=flat)](https://travis-ci.org/Tomoya Hirano/TileShiftView)
+[![CI Status](http://img.shields.io/travis/Tomoya%20Hirano/TileShiftView.svg?style=flat)](https://travis-ci.org/Tomoya%20Hirano/TileShiftView)
 [![Version](https://img.shields.io/cocoapods/v/TileShiftView.svg?style=flat)](http://cocoapods.org/pods/TileShiftView)
 [![License](https://img.shields.io/cocoapods/l/TileShiftView.svg?style=flat)](http://cocoapods.org/pods/TileShiftView)
 [![Platform](https://img.shields.io/cocoapods/p/TileShiftView.svg?style=flat)](http://cocoapods.org/pods/TileShiftView)
@@ -11,12 +11,12 @@
 
 ## Usage
 
-```
+```swift
 @IBOutlet private weak var tileShiftView: TileShiftView!
 ```
 or init(with frame)
 
-```
+```swift
 tileShiftView.prepare(with: [#imageLiteral(resourceName: "artwork_sample_00000"),
                             #imageLiteral(resourceName: "artwork_sample_00001"),
                             #imageLiteral(resourceName: "artwork_sample_00002"),
