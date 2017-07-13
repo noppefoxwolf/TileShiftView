@@ -11,12 +11,12 @@
 
 ## Usage
 
-```
+```swift
 @IBOutlet private weak var tileShiftView: TileShiftView!
 ```
 or init(with frame)
 
-```
+```swift
 tileShiftView.prepare(with: [#imageLiteral(resourceName: "artwork_sample_00000"),
                             #imageLiteral(resourceName: "artwork_sample_00001"),
                             #imageLiteral(resourceName: "artwork_sample_00002"),
