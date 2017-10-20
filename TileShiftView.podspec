@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TileShiftView'
-  s.version          = '0.3.0'
+  s.version          = '0.3.1'
   s.summary          = 'This view is a TileShift animation view of the specified image.'
 
   s.description      = <<-DESC
