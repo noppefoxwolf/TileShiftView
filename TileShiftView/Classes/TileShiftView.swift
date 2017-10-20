@@ -79,7 +79,7 @@ open class TileShiftView: UIView {
     interval.subscribe(onNext: { [weak self] (_) in
       guard let nextUpdateIndex = self?.createNextUpdateIndex() else { return }
       self?.reloadCell(index: nextUpdateIndex)
-    }).addDisposableTo(disposeBag)
+    }).disposed(by: disposeBag)
   }
   
   open override func layoutSubviews() {
