@@ -108,9 +108,9 @@ open class TileShiftView: UIView {
     let createRandomIndex = { (_: ()) -> Int in
       return Int(arc4random_uniform(10))
     }
-    var next = createRandomIndex()
+    var next = createRandomIndex(())
     while next == lastUpdateIndex {
-      next = createRandomIndex()
+      next = createRandomIndex(())
     }
     lastUpdateIndex = next
     return next
