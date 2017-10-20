@@ -16,5 +16,5 @@ You can also select the index you want to ignore.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'TileShiftView/Classes/**/*'
-  s.dependency 'RxSwift'
+  s.dependency 'RxSwift', '4.0.0-rc.0'
 end

@@ -1,19 +1,19 @@
 PODS:
-  - RxSwift (3.0.1)
-  - TileShiftView (0.1.0):
-    - RxSwift
+  - RxSwift (4.0.0-rc.0)
+  - TileShiftView (0.2.0):
+    - RxSwift (= 4.0.0-rc.0)
 
 DEPENDENCIES:
   - TileShiftView (from `../`)
 
 EXTERNAL SOURCES:
   TileShiftView:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  RxSwift: af5680055c4ad04480189c52d28385b1029493a6
-  TileShiftView: ea2c6c6643f22416e5a4e2377048d44c2844efe6
+  RxSwift: 1dd09ceb11531c39adff4efe23556b1484e16967
+  TileShiftView: d120c83b7ecd83c8f71a5566757957b9c77d85b2
 
 PODFILE CHECKSUM: 4bfc8cd6d2a57744d5e66793d09a12f0fe3cac55
 
-COCOAPODS: 1.2.1.beta.1
+COCOAPODS: 1.3.1
